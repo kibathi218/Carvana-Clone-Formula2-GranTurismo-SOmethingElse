@@ -37,7 +37,7 @@ module.exports = (sequelize, DataTypes) => {
     weight: DataTypes.INTEGER,
     image: DataTypes.STRING,
     topSpeedEffect: DataTypes.INTEGER,
-    accelerationEffect: DataTypes.INTEGER,
+    accelerationEffect: DataTypes.REAL,
     horsePowerEffect: DataTypes.INTEGER,
     price: DataTypes.INTEGER
   }, {

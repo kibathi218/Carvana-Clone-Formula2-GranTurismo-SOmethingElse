@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Car.belongsTo(models.User, { foreignKey:'ownerId' })
-      Car.hasMany(models.Parts, { foreignKey: 'carId' })
+      Car.hasMany(models.Part, { foreignKey: 'carId' })
     }
   }
   Car.init({
@@ -31,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
     color: DataTypes.STRING,
     image: DataTypes.STRING,
     topSpeed: DataTypes.INTEGER,
-    acceleration: DataTypes.INTEGER,
+    acceleration: DataTypes.REAL,
     horsePower: DataTypes.INTEGER,
     weight: DataTypes.INTEGER,
     price: DataTypes.INTEGER

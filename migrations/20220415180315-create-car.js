@@ -33,7 +33,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       acceleration: {
-        type: Sequelize.INTEGER
+        type: Sequelize.REAL
       },
       horsePower: {
         type: Sequelize.INTEGER
