@@ -1,0 +1,23 @@
+{
+  "name": "carvana-clone-formula2-granturismo-somethingelse",
+  "version": "1.0.0",
+  "description": "[Kat Imperial](https://github.com/katimperial) [Linkedin](https://www.linkedin.com/in/kat-imperial-093b168b/)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kibathi218/Carvana-Clone-Formula2-GranTurismo-SOmethingElse.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kibathi218/Carvana-Clone-Formula2-GranTurismo-SOmethingElse/issues"
+  },
+  "homepage": "https://github.com/kibathi218/Carvana-Clone-Formula2-GranTurismo-SOmethingElse#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
