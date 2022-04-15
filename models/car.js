@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
   Car.init({
     ownerId: {
       type: DataTypes.INTEGER,
-      onDelete: 'SET NULL',
+      onDelete: 'CASCADE',
       references: {
         model: 'users',
         key: 'id'
