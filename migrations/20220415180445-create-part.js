@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Parts', {
+    await queryInterface.createTable('parts', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -11,7 +11,7 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
-      type: {
+      performance: {
         type: Sequelize.BOOLEAN
       },
       ownerId: {
@@ -49,6 +49,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Parts');
+    await queryInterface.dropTable('parts');
   }
 };
