@@ -11,13 +11,29 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Part.belongsToMany(models.Car, {foreignKey: 'carId'})
+      Part.belongsToMany(models.User, { foreignKey: 'ownerId '})
     }
   }
   Part.init({
     name: DataTypes.STRING,
-    type: DataTypes.BOOLEAN,
-    ownerId: DataTypes.INTEGER,
-    carId: DataTypes.INTEGER,
+    performance: DataTypes.BOOLEAN,
+    ownerId: {
+      type: DataTypes.INTEGER,
+      onDelete: 'CASCADE',
+      references: {
+        model: 'users',
+        key: 'id'
+      }
+    },
+    carId: {
+      type: DataTypes.INTEGER,
+      onDelete: 'CASCADE',
+      references: {
+        model: 'cars',
+        key: 'id'
+      }
+    },
     weight: DataTypes.INTEGER,
     image: DataTypes.STRING,
     topSpeedEffect: DataTypes.INTEGER,
@@ -27,6 +43,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Part',
+    tableName: 'parts'
   });
   return Part;
 };
