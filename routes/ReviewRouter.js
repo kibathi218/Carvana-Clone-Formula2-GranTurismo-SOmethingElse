@@ -1,10 +1,29 @@
 const Router = require('express').Router()
 const controller = require('../controllers/ReviewController')
+const middleware = require('../middleware')
 
-Router.get('/view/:part_id', controller.GetReview)
-Router.post('/:owner_id/:part_id', controller.CreateReview)
-Router.put('/:review_id', controller.UpdateReview)
-Router.delete('/:review_id', controller.DeleteReview)
+Router.get(
+    '/view/:part_id', 
+    controller.GetReview
+)
+Router.post(
+    '/:owner_id/:part_id',
+    middleware.stripToken,
+    middleware.verifyToken, 
+    controller.CreateReview
+)
+Router.put(
+    '/:review_id',
+    middleware.stripToken,
+    middleware.verifyToken, 
+    controller.UpdateReview
+)
+Router.delete(
+    '/:review_id',
+    middleware.stripToken,
+    middleware.verifyToken, 
+    controller.DeleteReview
+)
 
 ///
 
