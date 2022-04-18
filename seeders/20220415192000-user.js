@@ -29,6 +29,7 @@ module.exports = {
           username: 'nikki_lauda',
           email: 'nikki@gmail.com',
           passwordDigest: 'examplepassword3',
+          createdAt: new Date(),
           updatedAt: new Date()
         },
         {
