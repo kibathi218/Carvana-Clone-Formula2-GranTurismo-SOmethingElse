@@ -11,5 +11,5 @@ const PORT = process.env.PORT || 3001
 app.use(cors())
 app.use(express.json())
 
-app.use('/api', AppRouter)
+app.use('/', AppRouter)
 app.listen(PORT, () => console.log(`Server Running On Port: ${PORT}`))
