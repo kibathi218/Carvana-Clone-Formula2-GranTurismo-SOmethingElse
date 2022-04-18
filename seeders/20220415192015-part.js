@@ -7,6 +7,8 @@ module.exports = {
       [
         {
           name: 'AMT Sports Air Filter',
+          ownerId: 0,
+          carId: 0,
           performance: true,
           weight: 1,
           image: 'https://images-na.ssl-images-amazon.com/images/I/81NTICXqCLL.jpg',
@@ -21,6 +23,8 @@ module.exports = {
         },
         {
           name: 'Carbon Winged Spoiler',
+          ownerId: 0,
+          carId: 0,
           performance: true,
           weight: 10,
           image: 'https://www.spotdem.com/wp-content/uploads/2020/06/spoiler-1024x609.jpg',
@@ -35,6 +39,8 @@ module.exports = {
         },
         {
           name: 'AMT Stainless Steel Sports Muffler',
+          ownerId: 0,
+          carId: 0,
           performance: true,
           weight: 25,
           image: 'https://www.swedishcarparts.com/uploads/part_image/file_name/000/001/570/1570/ffcf1156.jpg',
@@ -49,6 +55,8 @@ module.exports = {
         },
         {
           name: 'Holographic Candy Wrap',
+          ownerId: 0,
+          carId: 0,
           performance: false,
           weight: 0,
           image: 'https://i.pinimg.com/originals/0c/6c/5e/0c6c5ec856e64b58d7b70738fc98ea29.jpg',
@@ -63,6 +71,8 @@ module.exports = {
         },
         {
           name: 'Formula 1 High Performance Tires Set (x4)',
+          ownerId: 0,
+          carId: 0,
           performance: true,
           weight: 88,
           image: 'https://s3-eu-west-1.amazonaws.com/crash.net/image_importer/F1/1523874273.jpg',
@@ -77,6 +87,8 @@ module.exports = {
         },
         {
           name: 'AIRMEX Front Bumper Lip Chin Bumper Splitter Glossy Kit',
+          ownerId: 0,
+          carId: 0,
           performance: true,
           weight: 5,
           image: 'https://us-w1-img-listing.eccang.com/0/QjdTYW5WdzNIMmkyaEs1NThFaGdTdz09/202009/5064992TbWjMbXE.jpg',
@@ -91,6 +103,8 @@ module.exports = {
         },
         {
           name: 'Pzero Performance Tires',
+          ownerId: 0,
+          carId: 0,
           performance: true,
           weight: 10,
           image: 'https://c2.staticflickr.com/2/1600/25893277392_8f16688923_b.jpg',
@@ -105,6 +119,8 @@ module.exports = {
         },
         {
           name: ' GoodYear BBS Magnesium Racing Rims',
+          ownerId: 0,
+          carId: 0,
           performance: false,
           weight: 10,
           image: 'https://static.carthrottle.com/workspace/uploads/posts/2017/12/0904c4dd186476687c8732dedb8ba8cc.jpg',
@@ -119,6 +135,8 @@ module.exports = {
         },
         {
           name: 'Japan JR Racing Rims 17',
+          ownerId: 0,
+          carId: 0,
           performance: true,
           weight: 20,
           image: 'https://www.jdmdistro.com/wp-content/uploads/2021/02/JR9178582074GD_22279_1.jpg',
