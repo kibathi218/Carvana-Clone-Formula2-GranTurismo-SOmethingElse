@@ -33,6 +33,8 @@ module.exports = (sequelize, DataTypes) => {
     topSpeed: DataTypes.INTEGER,
     acceleration: DataTypes.REAL,
     horsePower: DataTypes.INTEGER,
+    braking: DataTypes.INTEGER,
+    handling: DataTypes.INTEGER,
     weight: DataTypes.INTEGER,
     price: DataTypes.INTEGER
   }, {
