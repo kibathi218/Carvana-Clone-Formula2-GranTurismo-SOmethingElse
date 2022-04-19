@@ -6,6 +6,10 @@ Router.get(
     '/view/:part_id', 
     controller.GetReview
 )
+Router.get(
+    '/review/:review_id',
+    controller.GetReviewById
+)
 Router.post(
     '/:owner_id/:part_id',
     middleware.stripToken,
