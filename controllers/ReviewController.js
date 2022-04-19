@@ -9,6 +9,17 @@ const GetReview = async (req, res) => {
     }
 }
 
+const  GetReviewById = async (req, res) => {
+    try{
+        let reviewId = parseInt(req.params.review_id)
+        const review = await Review.findOne({where: {id: reviewId}})
+        res.send(review)
+
+    } catch (error) {
+        throw error
+    }
+}
+
 const CreateReview = async (req, res) => {
     try {
         let ownerId = parseInt(req.params.owner_id)
@@ -56,6 +67,7 @@ const DeleteReview = async (req, res) => {
 module.exports = {
     CreateReview,
     GetReview,
+    GetReviewById,
     UpdateReview,
     DeleteReview
 }
