@@ -7,7 +7,7 @@ Router.get(
     controller.GetReview
 )
 Router.get(
-    '/review/:review_id',
+    '/:review_id',
     controller.GetReviewById
 )
 Router.post(
