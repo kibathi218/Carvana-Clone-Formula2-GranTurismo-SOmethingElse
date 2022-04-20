@@ -2,7 +2,6 @@ const { Car } = require('../models')
 
 const GetCars = async (req, res) => {
     try{
-        console.log("banana")
         const cars = await Car.findAll()
         console.log(cars)
         res.send(cars)
