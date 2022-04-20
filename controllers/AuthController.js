@@ -55,8 +55,9 @@ const UpdatePassword = async (req, res) => {
   }
 }
 
+
 module.exports = {
   Login,
   Register,
-  UpdatePassword
+  UpdatePassword,
 }
