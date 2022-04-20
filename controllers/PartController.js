@@ -21,8 +21,39 @@ const GetPartDetails = async (req, res) => {
     }
 }
 
+const CreatePart = async (req, res) => {
+    try {
+        let ownerId = parseInt(req.params.owner_id)
+        
+
+        let partBody = {
+            ownerId,
+            ...req.body
+        }
+
+        const part = await Part.create(partBody)
+        res.send(part)
+    } catch (error) {
+        throw error
+    }
+}
+
+const UpdatePart = async (req, res) => {
+    try {
+
+        let partId = parseInt(req.params.part_id)
+
+        const updatedPart = await Part.update(req.body,
+            { where: { id: partId } })
+        res.send(updatedPart)
+    } catch (error) {
+        throw error
+    }
+}
 
 module.exports = {
     GetParts,
-    GetPartDetails
+    GetPartDetails,
+    CreatePart,
+    UpdatePart
 }

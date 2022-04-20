@@ -11,6 +11,19 @@ Router.get(
     controller.GetPartDetails
 )
 
+Router.post(
+    '/:owner_id',
+    middleware.stripToken,
+    middleware.verifyToken, 
+    controller.CreatePart
+)
+
+Router.put(
+    '/:part_id',
+    middleware.stripToken,
+    middleware.verifyToken, 
+    controller.UpdatePart
+)
 
 
 module.exports = Router

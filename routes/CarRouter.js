@@ -12,5 +12,19 @@ Router.get(
     controller.GetCarDetails
 )
 
+Router.post(
+    '/:owner_id',
+    middleware.stripToken,
+    middleware.verifyToken, 
+    controller.CreateCar
+)
+
+Router.put(
+    '/:car_id',
+    middleware.stripToken,
+    middleware.verifyToken, 
+    controller.UpdateCar
+)
+
 
 module.exports = Router
