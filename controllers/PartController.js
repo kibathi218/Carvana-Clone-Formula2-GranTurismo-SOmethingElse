@@ -1,8 +1,8 @@
-const { Part } = require('../models')
+const { Part, User } = require('../models')
 
 const GetParts = async (req, res) => {
     try{
-        const parts = await Part.findAll()
+        const parts = await Part.findAll({include: User})
         res.send(parts)
 
     } catch (error) {
@@ -13,7 +13,7 @@ const GetParts = async (req, res) => {
 const GetPartDetails = async (req, res) => {
     try{
         let partId = parseInt(req.params.part_id)
-        const partDetails = await Part.findOne({where: {id: partId}})
+        const partDetails = await Part.findOne({where: {id: partId}, include: User})
         res.send(partDetails)
 
     } catch (error) {
