@@ -13,7 +13,7 @@ Router.post(
 Router.get(
   '/session',
   middleware.stripToken,
-  middleware.verifyToken
-//   controller.CheckSession
+  middleware.verifyToken,
+  controller.CheckSession
 )
 module.exports = Router

@@ -26,5 +26,12 @@ Router.put(
     controller.UpdateCar
 )
 
+Router.delete(
+    '/:car_id',
+    middleware.stripToken,
+    middleware.verifyToken, 
+    controller.DeleteCar
+)
+
 
 module.exports = Router

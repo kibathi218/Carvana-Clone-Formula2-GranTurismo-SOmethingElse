@@ -18,6 +18,7 @@ module.exports = {
           brakingEffect: 0,
           handlingEffect: 1,
           price: 25,
+          status: true,
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -34,6 +35,7 @@ module.exports = {
           brakingEffect: 0,
           handlingEffect: 2,
           price: 1500,
+          status: true,
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -50,6 +52,7 @@ module.exports = {
           brakingEffect: 0,
           handlingEffect: 0,
           price: 2000,
+          status: true,
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -66,6 +69,7 @@ module.exports = {
           brakingEffect: 0,
           handlingEffect: 0,
           price: 15000,
+          status: true,
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -82,6 +86,7 @@ module.exports = {
           brakingEffect: 5,
           handlingEffect: 5,
           price: 10000,
+          status: true,
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -98,6 +103,7 @@ module.exports = {
           brakingEffect: 0,
           handlingEffect: -1,
           price: 503,
+          status: true,
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -114,6 +120,7 @@ module.exports = {
           brakingEffect: 5,
           handlingEffect: 5,
           price: 5450,
+          status: true,
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -130,6 +137,7 @@ module.exports = {
           brakingEffect: 0,
           handlingEffect: 0,
           price: 1200,
+          status: true,
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -146,6 +154,7 @@ module.exports = {
           brakingEffect: 0,
           handlingEffect: 0,
           price: 2500,
+          status: true,
           createdAt: new Date(),
           updatedAt: new Date()
         },
