@@ -17,6 +17,7 @@ module.exports = {
           acceleration: 3.5,
           weight: 3146,
           price: 448400,
+          status: true,
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -32,6 +33,7 @@ module.exports = {
           acceleration: 5.6,
           weight: 3450,
           price: 36335,
+          status: true,
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -47,6 +49,7 @@ module.exports = {
           acceleration: 2.8,
           weight: 2699,
           price: 3100000,
+          status: true,
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -62,6 +65,7 @@ module.exports = {
           acceleration: 3.25,
           weight: 1455,
           price: 2100000,
+          status: true,
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -77,6 +81,7 @@ module.exports = {
           acceleration: 2.5,
           weight: 4160,
           price: 2250880,
+          status: true,
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -92,6 +97,7 @@ module.exports = {
           acceleration: 4.4,
           weight: 3460,
           price: 75225,
+          status: true,
           createdAt: new Date(),
           updatedAt: new Date()
         }

@@ -41,7 +41,8 @@ module.exports = (sequelize, DataTypes) => {
     horsePowerEffect: DataTypes.INTEGER,
     brakingEffect: DataTypes.INTEGER,
     handlingEffect: DataTypes.INTEGER,
-    price: DataTypes.INTEGER
+    price: DataTypes.INTEGER,
+    status: DataTypes.BOOLEAN
   }, {
     sequelize,
     modelName: 'Part',

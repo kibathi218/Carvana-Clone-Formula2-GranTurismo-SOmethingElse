@@ -51,9 +51,22 @@ const UpdatePart = async (req, res) => {
     }
 }
 
+const DeletePart = async (req, res) => {
+    try {
+
+        let partId = parseInt(req.params.part_id)
+
+        await Part.destroy({ where: { id: partId } })
+        res.send({ message: `You have deleted a part with an id of ${partId}` })
+    } catch (error) {
+        throw error
+    }
+}
+
 module.exports = {
     GetParts,
     GetPartDetails,
     CreatePart,
-    UpdatePart
+    UpdatePart,
+    DeletePart
 }
