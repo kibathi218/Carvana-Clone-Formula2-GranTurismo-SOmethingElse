@@ -1,8 +1,8 @@
-const { Car } = require('../models')
+const { Car, User } = require('../models')
 
 const GetCars = async (req, res) => {
     try{
-        const cars = await Car.findAll()
+        const cars = await Car.findAll({ include: User})
         res.send(cars)
 
     } catch (error) {
@@ -13,7 +13,7 @@ const GetCars = async (req, res) => {
 const GetCarDetails = async (req, res) => {
     try{
         let carId = parseInt(req.params.car_id)
-        const carDetails = await Car.findOne({where: {id: carId}})
+        const carDetails = await Car.findOne({where: {id: carId}, include: User})
         res.send(carDetails)
 
     } catch (error) {
@@ -52,10 +52,22 @@ const UpdateCar = async (req, res) => {
     }
 }
 
+const DeleteCar = async (req, res) => {
+    try {
+
+        let carId = parseInt(req.params.car_id)
+
+        await Car.destroy({ where: { id: carId } })
+        res.send({ message: `You have deleted a car with an id of ${carId}` })
+    } catch (error) {
+        throw error
+    }
+}
 
 module.exports = {
     GetCars,
     GetCarDetails,
     CreateCar,
-    UpdateCar
+    UpdateCar,
+    DeleteCar
 }
