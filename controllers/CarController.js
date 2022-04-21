@@ -2,7 +2,12 @@ const { Car, User } = require('../models')
 
 const GetCars = async (req, res) => {
     try{
+<<<<<<< HEAD
+        const cars = await Car.findAll()
+        console.log(cars)
+=======
         const cars = await Car.findAll({ include: User})
+>>>>>>> db8fb7712947802148cf0814184c52ae2389ac12
         res.send(cars)
 
     } catch (error) {
@@ -13,7 +18,13 @@ const GetCars = async (req, res) => {
 const GetCarDetails = async (req, res) => {
     try{
         let carId = parseInt(req.params.car_id)
+<<<<<<< HEAD
+        console.log(carId)
+        const carDetails = await Car.findOne({where: {id: carId}})
+        console.log(carDetails)
+=======
         const carDetails = await Car.findOne({where: {id: carId}, include: User})
+>>>>>>> db8fb7712947802148cf0814184c52ae2389ac12
         res.send(carDetails)
 
     } catch (error) {
