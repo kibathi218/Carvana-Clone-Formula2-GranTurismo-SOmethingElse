@@ -25,5 +25,12 @@ Router.put(
     controller.UpdatePart
 )
 
+Router.delete(
+    '/:part_id',
+    middleware.stripToken,
+    middleware.verifyToken, 
+    controller.DeletePart
+)
+
 
 module.exports = Router

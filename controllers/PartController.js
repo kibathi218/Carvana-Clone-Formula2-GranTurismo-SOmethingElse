@@ -1,8 +1,8 @@
-const { Part } = require('../models')
+const { Part, User } = require('../models')
 
 const GetParts = async (req, res) => {
     try{
-        const parts = await Part.findAll()
+        const parts = await Part.findAll({include: User})
         res.send(parts)
 
     } catch (error) {
@@ -13,7 +13,7 @@ const GetParts = async (req, res) => {
 const GetPartDetails = async (req, res) => {
     try{
         let partId = parseInt(req.params.part_id)
-        const partDetails = await Part.findOne({where: {id: partId}})
+        const partDetails = await Part.findOne({where: {id: partId}, include: User})
         res.send(partDetails)
 
     } catch (error) {
@@ -51,9 +51,22 @@ const UpdatePart = async (req, res) => {
     }
 }
 
+const DeletePart = async (req, res) => {
+    try {
+
+        let partId = parseInt(req.params.part_id)
+
+        await Part.destroy({ where: { id: partId } })
+        res.send({ message: `You have deleted a part with an id of ${partId}` })
+    } catch (error) {
+        throw error
+    }
+}
+
 module.exports = {
     GetParts,
     GetPartDetails,
     CreatePart,
-    UpdatePart
+    UpdatePart,
+    DeletePart
 }
