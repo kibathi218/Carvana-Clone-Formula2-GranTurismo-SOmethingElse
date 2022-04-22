@@ -55,5 +55,5 @@ Sam and Dylan hitting the back end starting strong with migrations, databases, a
 [Trello Board](https://trello.com/b/BuPqW8gH/grand-turismo-forumla-2-project-3)
 
 ### Credits
-Seed data for cars and parts provided by google search. Use image urls for reference within Seed Files.
-Direction for JWT AUTH, Heroku Deployment, and CSS taken from [SEI](https://github.com/SEI-R-2-22/class_wiki) instruction.
+* Seed data for cars and parts provided by google search. Use image urls as source reference (located within seed files).
+* Direction for JWT AUTH, Heroku Deployment, and CSS taken from [SEI](https://github.com/SEI-R-2-22/class_wiki) instruction.
